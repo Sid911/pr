@@ -18,7 +18,7 @@ const engine = new Styletron();
 ReactDOM.render(
   <React.StrictMode>
     <StyletronProvider value={engine} debug={debug} debugAfterHydration>
-      <StyleReset />
+      <StyleReset/>
       <App />
     </StyletronProvider>
   </React.StrictMode>,
