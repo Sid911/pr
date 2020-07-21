@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+import { StyleReset } from 'atomize';
 import { Provider as StyletronProvider, DebugEngine } from "styletron-react";
 import { Client as Styletron } from "styletron-engine-atomic";
 
@@ -15,7 +17,10 @@ const engine = new Styletron();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StyletronProvider value={engine} debug={debug} debugAfterHydration>
+      <StyleReset />
+      <App />
+    </StyletronProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
