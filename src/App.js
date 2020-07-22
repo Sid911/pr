@@ -4,11 +4,11 @@ import {Div,Container} from 'atomize'
 
 function App() {
   return (
-    <Div>
+    <div>
       <Container>
         <TitleBar/>
       </Container>
-    </Div>
+    </div>
   );
 }
 
