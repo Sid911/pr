@@ -1,11 +1,13 @@
 import React from 'react';
 import TitleBar from "./TitleBar/TitleBar"
-import {Div} from 'atomize'
+import {Div,Container} from 'atomize'
 
 function App() {
   return (
-    <Div bg="info200" h="100%">
-      <TitleBar/>
+    <Div>
+      <Container>
+        <TitleBar/>
+      </Container>
     </Div>
   );
 }
