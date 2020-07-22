@@ -5,10 +5,10 @@ import {Row,Col} from 'atomize'
 function App() {
   return (
     <div>
+      <Row>
+        <TitleBar/>
+      </Row>
       <Col>
-        <Row>
-          <TitleBar/>
-        </Row>
       </Col>
     </div>
   );
