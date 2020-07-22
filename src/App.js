@@ -1,13 +1,15 @@
 import React from 'react';
 import TitleBar from "./TitleBar/TitleBar"
-import {Div,Container} from 'atomize'
+import {Row,Container,Col} from 'atomize'
 
 function App() {
   return (
     <div>
-      <Container>
-        <TitleBar/>
-      </Container>
+      <Col>
+        <Row>
+          <TitleBar/>
+        </Row>
+      </Col>
     </div>
   );
 }
