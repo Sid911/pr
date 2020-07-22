@@ -14,7 +14,6 @@
     "electron": "^9.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-dropzone": "^11.0.2",
     "react-scripts": "3.4.1",
     "react-transition-group": "^4.4.1",
     "styletron-engine-atomic": "^1.4.6",

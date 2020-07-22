@@ -1,15 +1,13 @@
 import React from 'react';
 import TitleBar from "./TitleBar/TitleBar"
-import {Row,Col} from 'atomize'
+//import {Row,Col} from 'atomize'
+import DropArea from './Drop/DropArea'
 
 function App() {
   return (
     <div>
-      <Row>
         <TitleBar/>
-      </Row>
-      <Col>
-      </Col>
+        <DropArea/>
     </div>
   );
 }
