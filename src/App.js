@@ -4,7 +4,7 @@ import {Div} from 'atomize'
 
 function App() {
   return (
-    <Div bg="info200" style={{minHeight:"100%"}}>
+    <Div bg="info200" h="100%">
       <TitleBar/>
     </Div>
   );
