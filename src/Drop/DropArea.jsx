@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, Input, Row, Col } from 'atomize'
 import FileDescList from '../FileList/FileList'
+import Overdrive from "react-overdrive";
 
 export default class DropArea extends Component {
     constructor(props) {
@@ -22,6 +23,7 @@ export default class DropArea extends Component {
         this.fileList = this.fileInput.current.files
         if (this.fileList.length !== 0) {
             this.setState({ filesSelected: true })
+            document.getElementById('submit').style.display = 'block'
             console.log(`Total Objects Selected = ${this.fileList.length}`)
             console.log(`Name = ${this.fileList[0].name}`)
         }
@@ -35,20 +37,21 @@ export default class DropArea extends Component {
 
                     <Col bg="white" h="10rem" shadow="4" hoverShadow="5" size="auto" flexGrow="2"
                         cursor="pointer" rounded="lg" transition d="flex" justify="center" onClick={this.click}>
+
                         <Text tag="h1" textSize="display1" style={{ margin: "6%" }} textColor="black800">
                             Drop the files here or click <span role="img" aria-label="(Browse)">📁</span>
                         </Text>
                     </Col>
-                    {this.state.filesSelected ?
-                        <Col bg="info600" h="10rem" shadow="4" hoverShadow="5" size="auto" flexGrow="1"
-                            cursor="pointer" rounded="lg" transition d="flex" justify="center" style={{marginLeft:"1%"}}>
-                            <Text tag="h1" textSize="display1" style={{ marginTop: "15%" }} textColor="white">
-                                Submit <span role="img" aria-label="(Rocket)">🚀</span>
-                            </Text>
-                        </Col> : <br />}
+
+                    <Col bg="info600" h="10rem" shadow="4" hoverShadow="5" size="auto" flexGrow="1" id="submit"
+                        cursor="pointer" rounded="lg" transition d="flex" justify="center" style={{ marginLeft: "1%",display:"none" }}>
+                        <Text tag="h1" textSize="display1" style={{ marginTop: "13%",marginLeft:"30%" }} textColor="white">
+                            Submit <span role="img" aria-label="(Rocket)">🚀</span>
+                        </Text>
+                    </Col>
                 </Row>
                 <Input id="fileInput" type="file" rounded="lg" m={"5%"} accept="image/*" style={{ display: "none" }} ref={this.fileInput} onChange={this.handleSelect} multiple />
-                {this.state.filesSelected ? <FileDescList li={this.fileList} /> : console.log("Files not Selected")}
+                {this.state.filesSelected ? <Overdrive id="list" duration={500} easing="linear"><FileDescList li={this.fileList} /></Overdrive> : <Overdrive id="list"><br /></Overdrive>}
 
             </div>
 

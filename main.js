@@ -11,6 +11,8 @@ function createWindow () {
     minWidth: 500,
     webPreferences: {
       nodeIntegration: true,
+      webSecurity:false,
+      allowRunningInsecureContent:true
     }
   })
 

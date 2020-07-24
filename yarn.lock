@@ -9304,6 +9304,11 @@ react-loadable@^5.5.0:
   dependencies:
     prop-types "^15.5.0"
 
+react-overdrive@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/react-overdrive/-/react-overdrive-0.0.10.tgz#7cbe060906a2a98977a86a763bd417b736dfd17d"
+  integrity sha512-89CUOaGi0bzh7xzBDWdhT60Lt7oOIdJVKRrL92dAnlDyp8d2t2r2Xmd3mEz1Io6qOG98shc7X/PSK17Zpz/UXQ==
+
 react-scripts@3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-3.4.1.tgz#f551298b5c71985cc491b9acf3c8e8c0ae3ada0a"
