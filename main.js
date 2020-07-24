@@ -28,3 +28,9 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+app.setAboutPanelOptions({
+  applicationName : "O2",
+  version : 0.1,
+  authors: "Sid"
+})
