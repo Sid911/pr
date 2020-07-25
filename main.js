@@ -10,14 +10,21 @@ function createWindow () {
     minHeight: 500,
     minWidth: 500,
     webPreferences: {
-      nodeIntegration: true,
+      nodeIntegration:true,
       webSecurity:false,
-      allowRunningInsecureContent:true
+      allowRunningInsecureContent:true,
+      nativeWindowOpen: true
     }
   })
-
+  
   win.loadURL("http://localhost:3000/")
 }
+
+ipcMain.on('SignIn',(event,arg) => {
+  let new_win = new BrowserWindow({minHeight:700,minWidth:200})
+  new_win.loadURL(arg)//.then(new_win.close())
+})
+
 app.whenReady().then(createWindow)
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
