@@ -10,7 +10,7 @@
     "@testing-library/user-event": "^7.2.1",
     "@types/styletron-engine-atomic": "^1.1.0",
     "@types/styletron-react": "^5.0.2",
-    "@types/styletron-standard": "^2.0.0",
+    "@types/styletron-standard": "^2.0.1",
     "atomize": "^1.0.26",
     "electron": "^9.1.1",
     "google-auth-library": "^6.0.5",
