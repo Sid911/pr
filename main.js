@@ -19,12 +19,6 @@ function createWindow () {
   
   win.loadURL("http://localhost:3000/")
 }
-
-ipcMain.on('SignIn',(event,arg) => {
-  let new_win = new BrowserWindow({minHeight:700,minWidth:200})
-  new_win.loadURL(arg)//.then(new_win.close())
-})
-
 app.whenReady().then(createWindow)
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
